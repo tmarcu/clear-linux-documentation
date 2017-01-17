@@ -68,7 +68,6 @@ Tutorials
    :maxdepth: 2
 
    index-ts.rst
-   tutorials/wordpress.rst
 
 
 Indices and tables
