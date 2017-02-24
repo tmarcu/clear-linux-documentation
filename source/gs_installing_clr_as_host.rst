@@ -3,30 +3,23 @@
 Installing the OS as host
 #########################
 
-Running Clear Linux* OS for Intel® Architecture natively on a system is
-easy with the installer image. To get started you'll need the following:
+Running |CLOSIA| natively on a system is easy. In order to perform the installation you will need:
 
-* A USB stick flashed with the `installer image`_.  For instructions on how to
-  do this, see :ref:`gs_creating_bootable_usb`.
+* A :ref:`bootable USB Drive<gs_creating_bootable_usb>` flashed with the
+  `installer image`_.
 * A host machine running :ref:`gs_supported_hardware`.
 * Network access via DHCP.
 
-Installing Clear Linux OS for Intel Architecture to a target system
-===================================================================
+.. include:: ./tutorials/bare-metal-install/bare-metal-install.rst
+   :start-after: .. _install-on-target:
+   :end-before: .. _initial-setup:
 
-#. Configure the BIOS; this may involve changing the priority of the boot 
-   device to boot from USB port first. 
-#. Insert the USB device that is flashed with the 
-   `installer image`_ into the target system, then reboot. 
-#. The installer user interface will appear. Once all appropriate configuration
-   options have been chosen, the installer will install the OS.
-
-The entire installation should take no more than a few minutes. 
-
-For feedback on installation or other topics, please feel free to write in to our 
+We want to hear from you! Please feel free to write in to our
 `mailing list`_.
 
-Note: You can also try :ref:`vm-kvm`.
+.. note::
+
+   You can also try running |CL| on a :ref:`virtual machine<vm-kvm>`.
 
 .. _installer image: http://download.clearlinux.org/image
 .. _mailing list: https://lists.clearlinux.org/mailman/listinfo/dev

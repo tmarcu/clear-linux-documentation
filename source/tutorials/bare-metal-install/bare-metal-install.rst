@@ -118,14 +118,14 @@ the –v option for xzcat displays the progress.
 Once the image has been decompressed and copied to the USB drive, you can
 remove the USB drive from the system and move it to your target system.
 
+.. _install-on-target:
 
 Install Clear Linux on your target system
 =========================================
 
-The USB drive that was created in the previous step has been formatted as a
-UEFI boot device. Our target system has a hard drive installed containing a
-single primary partition. The target system needs a wired Internet connection
-with DHCP.
+The created USB drive has been formatted as a UEFI boot device. Our target
+system has a hard drive installed containing a single primary partition. The
+target system needs a wired Internet connection with DHCP.
 
 Follow these steps to install |CL| on the target system:
 
@@ -183,6 +183,8 @@ that you have successfully installed |CL| onto your system.
 
 10. Press enter, remove the USB drive from the system, and the system will
     reboot running |CL|.
+
+.. _initial-setup:
 
 Clear Linux initial setup after installation
 ============================================
