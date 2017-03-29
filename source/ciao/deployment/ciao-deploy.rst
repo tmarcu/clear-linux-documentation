@@ -1,6 +1,6 @@
-.. _ciao-deploy:
-
 .. contents::
+
+.. _ciao-deploy:
 
 Deploying ciao via automation
 #############################

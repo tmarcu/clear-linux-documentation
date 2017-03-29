@@ -1,6 +1,6 @@
-﻿.. _ciao-cluster-setup:
+﻿.. contents::
 
-.. contents::
+.. _ciao-cluster-setup:
 
 Detailed manual ciao cluster setup
 ##################################
@@ -22,7 +22,7 @@ You'll need at least four machines and a switch connecting them to form
 your beginning ciao cluster. The switch is assumed to be plugged directly
 into an "upstream" network running a DHCP server. See the illustration below as an example:
 
-.. image:: image-blob-ciao-networking.png
+.. image:: figures/ciao-cluster-setup-1.png
 
 The following examples assume you have four nodes on a ``192.168.0.0/16`` network:
 
@@ -71,7 +71,7 @@ Install Clear Linux OS for Intel Architecture as host on all nodes
 
 Install Clear Linux OS for Intel Architecture as the host
 OS on all nodes by following the instructions in the topic
-:ref:`gs_installing_clr_as_host`. The current `downloadable installer images`_ 
+:ref:`gs_installing_clr_as_host`. The current `downloadable installer images`_
 are compatible with ciao.
 
 After the base installation on each node, add the following additional
@@ -433,14 +433,14 @@ described above.
 Access your workload
 ====================
 
-Once your workload is up, you need to know its IP address and assigned 
+Once your workload is up, you need to know its IP address and assigned
 port, you can find it via ciao-cli::
 
   $ ciao-cli instance list
 
-Then look for the column "SSH IP", there is the IP assigned to your 
-workload, next to it, you will see the column SSH PORT; that's the 
-port that you will use to access a specific workload using your 
+Then look for the column "SSH IP", there is the IP assigned to your
+workload, next to it, you will see the column SSH PORT; that's the
+port that you will use to access a specific workload using your
 private key defined in the cloud-init configuration and the demo
 user name ``demouser``::
 
