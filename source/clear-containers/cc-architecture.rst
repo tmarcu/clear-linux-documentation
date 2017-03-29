@@ -1,36 +1,9 @@
-.. _clear_containers.rst:
+.. _cc-architecture:
 
-Intel® Clear Containers
-#######################
+Intel® Clear Containers architecture overview
+#############################################
 
-Introduction
-============
-
-Intel® Clear Containers is a collection of tools, configurations,
-and techniques anchored on an implementation that leverages Intel® 
-Architecture to optimize container launching and execution workflow. 
-These optimizations improve speed, size, and efficiency while offering 
-a number of benefits that can be derived only from hardware-backed 
-virtual machines (hardware-enforced isolation and security, for 
-example) on Intel® VT technology.
-
-These methods are applied across all levels of the host/virtual machine
-hierarchy: from the host-side userland software stack down through the host
-Linux* kernel, and into the client-side kernel and userland. 
-
-Although it is available as a standalone offering, the Clear Containers
-technology works best when it is able to leverage optimizations designed
-into the Clear Linux Project.
-
-Customers can integrate all or parts of Intel Clear Containers into a
-container infrastructure.
-
-.. _architecture_overview.rst:
-
-Architecture Overview
-=====================
-
-Intel Clear Containers are architected around the Linux 
+Intel Clear Containers are architected around the Linux
 :abbr:`Kernel Virtual Machine (KVM)` virtualization infrastructure to
 make best use of Intel Architecture VT features. Operational speed
 gets improved and overhead gets reduced by optimizing existing code,
@@ -38,16 +11,14 @@ removing redundant components, and implementing new techniques for
 containers with :abbr:`KVM (Kernel Virtual Machine)`.
 
 Version 1.0 of Clear Containers was designed as a lightweight container
-system based around `kvmtool`_'s ``lkvm``, 
+system based around `kvmtool`_'s ``lkvm``,
 :abbr:`KVM (Kernel Virtual Machine)` and Intel VT-x features; the
 initial version was aimed primarily at Docker* integration.  Version
-2.0 replaces ``lkvm`` with a lightweight version of 
+2.0 replaces ``lkvm`` with a lightweight version of
 :abbr:`QEMU (Quick EMUlator)` `(link) <http:www.qemu.org>`_.
 
 Version 2.0 also expands the feature set to include key technologies, such
 as `SR-IOV`_, and the :abbr:`Open Container Initiative (OCI)` runtime API.
-
-
 
 V1.0
 ====
@@ -56,7 +27,7 @@ V1.0 (also known as **Intel® Clear Containers for Docker
 Engine**) is based around `kvmtool`_, with example host integrations for
 Docker and `rkt`_.
 
-.. figure:: _static/images/clear-containers-v1.png
+.. figure:: figures/clear-containers-v1.png
    :align: center
    :alt: Intel Clear Containers V1.0
 
@@ -71,7 +42,7 @@ optimizations are applied:
   is recommended for efficient page sharing of VM pages. Kernel documentation
   can be found in Documentation/vm/ksm.txt  Config symbol: ``CONFIG_KSM``
 * Using a kernel version >= v4.0 (or backporting appropriate
-  patches if your kernel version is less than v4.0), to get the best 
+  patches if your kernel version is less than v4.0), to get the best
   :abbr:`KVM (Kernel Virtual Machine)` VM startup times
 
   .. note::
@@ -146,7 +117,7 @@ been migrated into the image they create.
 V2.0
 ====
 
-Intel Clear Containers V2.0 adopts an optimized version of the established `QEMU`_ 
+Intel Clear Containers V2.0 adopts an optimized version of the established `QEMU`_
 host virtualization engine, in order to support extra features not found in
 Clear Containers V1.0. Clear Containers. V2.0 is also compatible with the
 :abbr:`OCI (Open Container Initiative)` runtime-specification standard,
@@ -154,7 +125,7 @@ introducing a host-side abstraction tool to ease host-side integration and to
 isolate integration instances from future changes to the underlying Clear
 Containers architecture.
 
-.. figure:: _static/images/clear-containers-v2.png
+.. figure:: figures/clear-containers-v2.png
    :align: center
    :alt: Clear Containers V2.0
 
@@ -176,7 +147,7 @@ Our version of ``qemu-lite`` has the following modifications:
 * :abbr:`DAX (Direct Access)` support, **enabling fast and space efficient**
   file access through zero-copy mapping and multi-container sharing of raw
   client filesystem images from the host filesystem.
-* **Reduced "slimline" PC model** to reduce startup costs in both `QEMU`_ 
+* **Reduced "slimline" PC model** to reduce startup costs in both `QEMU`_
   and the client kernel.
 * **Removed need for BIOS**, saving boot time.
 * **No bootloader requirement**, to speed up boot.
@@ -220,7 +191,7 @@ Linux Kernel Documentation: Documentation/vm/ksm.txt
 and merge (share) identical memory pages within the system, even
 when they are not sourced from the same binary. When sourced from
 the same binary, the kernel will naturally share through the
-:abbr:`copy-on-write (COW)` method. 
+:abbr:`copy-on-write (COW)` method.
 
 :abbr:`KSM (Kernel Samepage Merging)` also allows the kernel to
 localize and to coalesce pages from within virtual machine memory
@@ -352,7 +323,7 @@ mini-OS consists of a Linux kernel image and root filesystem image.
   re-built as desired, for specific requirements.
 
 * **DAX** -- The :abbr:`Direct Access (DAX)` filesystem.
-  (Linux Kernel Documentation: ``Documentation/filesystems/dax.txt``). 
+  (Linux Kernel Documentation: ``Documentation/filesystems/dax.txt``).
   Mapping host-side files into the memory map of the client allows the use of
   :abbr:`DAX (Direct Access)` to directly mount those files, bypassing the
   client side page cache and the virtual device mechanisms between host and
@@ -362,13 +333,13 @@ mini-OS consists of a Linux kernel image and root filesystem image.
   (Direct Access)` is enabled in Intel Clear Containers V1.0 using a shmem
   PCI-BAR mechanism configured by `kvmtool`_.
 
-  .. figure:: _static/images/dax-v1.png
+  .. figure:: figures/dax-v1.png
   	 :align: center
 
-  :abbr:`DAX (Direct Access)` is enabled in Intel Clear Containers 
+  :abbr:`DAX (Direct Access)` is enabled in Intel Clear Containers
   V2.0 using an   NVDIMM `QEMU`_ memdev mechanism:
 
-    .. figure:: _static/images/dax-v2.png
+    .. figure:: figures/dax-v2.png
   	 :align: center
 
   :abbr:`DAX (Direct Access)` can only be used to mount single flat files
@@ -396,7 +367,7 @@ the mini-OS to execute them using the mini-OS workload. Please
 refer to the `Intel Clear Containers integration guide`_ for
 further detail.
 
-.. removed this section since it is in the GSG 
+.. removed this section since it is in the GSG
 
 FAQ
 ===
