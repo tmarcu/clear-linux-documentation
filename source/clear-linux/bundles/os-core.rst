@@ -1,4 +1,4 @@
-.. _bdl-os-core:
+.. _os-core:
 
 os-core
 #######
@@ -14,7 +14,7 @@ To configure a static IP you should follow the next steps:
    does not exist, please create it.
 
 #. The minimum lines the :file:`50-static.network` file should contain are::
-   
+
      [Match]
      Name=<device_name>
 
@@ -27,21 +27,21 @@ To configure a static IP you should follow the next steps:
 #. If you want to add more options you can consult the
    `systemd network configuration`_ manual.
 
-#. Restart *systemd-networkd* service using:: 
+#. Restart *systemd-networkd* service using::
 
      # systemctl restart systemd-networkd
 
    or restart Clear Linux.
 
 #. Check new IP with::
-  
+
      # ip addr
 
 
 Setting Time
 ============
 
-Clear Linux utilizes **systemd-timesyncd.service** to sync time. 
+Clear Linux utilizes **systemd-timesyncd.service** to sync time.
 Default :abbr:`NTP (Network Time Protocol)` servers are
 configured as *time1.google.com, time2.google.com, time3.google.com, and
 time4.google.com*. It is not possible to set the time manually, via

@@ -1,4 +1,4 @@
-.. _gs_supported_hardware:
+.. _supported_hardware:
 
 Supported hardware
 ##################

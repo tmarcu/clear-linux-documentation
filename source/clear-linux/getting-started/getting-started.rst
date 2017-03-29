@@ -1,9 +1,9 @@
-.. _gs_getting_started:
+.. _getting_started:
 
 Getting started
 ###############
 
-There are a number of options available for downloading and running Clear 
+There are a number of options available for downloading and running Clear
 Linux* OS for Intel® Architecture. You can check your system hardware
 capabilities against the list of `supported processors`_; alternatively,
 download and run the `clear-linux-check-config`_ script to check the hardware

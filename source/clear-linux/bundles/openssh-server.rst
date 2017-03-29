@@ -1,4 +1,4 @@
-.. _bdl-openssh-server:
+.. _openssh-server:
 
 openssh-server
 ##############

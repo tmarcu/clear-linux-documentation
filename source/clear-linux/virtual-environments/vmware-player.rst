@@ -1,15 +1,15 @@
-.. _vm-vmware-player:
+.. _vmware-player:
 
 Using VMware* Player
 ####################
 
-This section explains how to run Clear Linux OS for Intel® Architecture 
+This section explains how to run Clear Linux OS for Intel® Architecture
 within a `VMware Player`_ environment.
 
 Please ensure you have enabled `Intel® Virtualization Technology
-<http://www.intel.com/content/www/us/en/virtualization/virtualization-technology/intel-virtualization-technology.html>`_ 
+<http://www.intel.com/content/www/us/en/virtualization/virtualization-technology/intel-virtualization-technology.html>`_
 (Intel® VT) and `Intel® Virtualization Technology for Directed I/O
-<https://software.intel.com/en-us/articles/intel-virtualization-technology-for-directed-io-vt-d-enhancing-intel-platforms-for-efficient-virtualization-of-io-devices>`_ 
+<https://software.intel.com/en-us/articles/intel-virtualization-technology-for-directed-io-vt-d-enhancing-intel-platforms-for-efficient-virtualization-of-io-devices>`_
 (Intel® VT-d) in your BIOS/UEFI firmware configuration.
 
 Install VMware Player
@@ -38,7 +38,7 @@ Follow the instructions from the Setup Assistant.
 Prepare Image
 =============
 
-#. Download the `latest`_ Clear Linux OS for Intel Architecture **live** 
+#. Download the `latest`_ Clear Linux OS for Intel Architecture **live**
    disk image, named ``[clear-[version_number]-live.img.xz]``.
 
 #. Decompress the image. Uncompressed image size ~ **5GB**.

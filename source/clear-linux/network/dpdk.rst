@@ -1,10 +1,7 @@
-.. _ac-dpdk:
+.. _dpdk:
 
 DPDK
 ####
-
-Introduction
-============
 
 DPDK_ (Data Plane Development Kit) is a set of libraries and drivers for fast
 packet processing.
@@ -22,7 +19,8 @@ application will forward those packages. See (:ref:`f1`)
    Figure 1: environment for l3fwd DPDK application.
 
 
-**Requirements:**
+Requirements
+============
 
 * Two platforms using Clear Linux* for Intel® Architecture (recommended release
   `13330`_ or higher).
@@ -151,7 +149,7 @@ allocation used for packet buffers.
       # echo 1024 > /sys/devices/system/node/node1/hugepages/hugepages-2048kB/nr_hugepages
 
 #. Make memory available for DPDK.
-   
+
    .. code-block:: bash
 
       # mkdir -p /mnt/huge $ mount -t hugetlbfs nodev /mnt/huge
@@ -277,7 +275,7 @@ control the host's NICs.
    where ``8086:1521`` is ``vendor:device ID`` and ``03:00.0`` is the entry for device.  Make
    note of this information; it is necessary for unbinding a host's NICs.
 
-#. Unbind NICs from host to do passthrough with virtual machines. Clear Linux OS for Intel Architecture 
+#. Unbind NICs from host to do passthrough with virtual machines. Clear Linux OS for Intel Architecture
    currently supports this action. You can use the following commands::
 
       echo "vendor device_ID" > /sys/bus/pci/drivers/pci-stub/new_id

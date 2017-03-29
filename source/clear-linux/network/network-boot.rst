@@ -1,4 +1,4 @@
-.. _network_boot:
+.. _network-boot:
 
 Network Booting
 ###############

@@ -1,3 +1,5 @@
+.. _swupd-about:
+
 About software update
 #####################
 
@@ -19,7 +21,7 @@ each package individually or as a set, using tools such as ``yum`` and
 The Clear way
 =============
 
-Clear Linux OS for Intel® Architecture does things a little differently. 
+Clear Linux OS for Intel® Architecture does things a little differently.
 The following are a few notable features that distinguish it from
 standard OSes: bundles, versioning, updating, and update speed.
 
@@ -98,7 +100,6 @@ can be disabled by running::
 And reenabled by running::
 
     # systemctl unmask swupd-update.timer
-
 
 Update speed
 ------------

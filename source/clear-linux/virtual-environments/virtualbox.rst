@@ -1,4 +1,4 @@
-.. _vm-virtualbox:
+.. _virtualbox:
 
 Using VirtualBox*
 #################
@@ -7,9 +7,9 @@ This section explains how to run |CLOSIA|
 inside a `VirtualBox`_\* environment.
 
 Please ensure you have enabled `Intel® Virtualization Technology
-<http://www.intel.com/content/www/us/en/virtualization/virtualization-technology/intel-virtualization-technology.html>`_ 
+<http://www.intel.com/content/www/us/en/virtualization/virtualization-technology/intel-virtualization-technology.html>`_
 (Intel® VT) and `Intel® Virtualization Technology for Directed I/O
-<https://software.intel.com/en-us/articles/intel-virtualization-technology-for-directed-io-vt-d-enhancing-intel-platforms-for-efficient-virtualization-of-io-devices>`_ 
+<https://software.intel.com/en-us/articles/intel-virtualization-technology-for-directed-io-vt-d-enhancing-intel-platforms-for-efficient-virtualization-of-io-devices>`_
 (Intel® VT-d) in your BIOS/UEFI firmware configuration.
 
 Download VirtualBox
@@ -98,7 +98,7 @@ Run your new VM
 |CLOSIA| supports VirtualBox kernel modules used
 by the Linux kernel 4.9 :abbr:`LTS (Long Term Support)` (*kernel-lts bundle*).
 This kernel was selected because |CL| OS's main kernel
-(``kernel-native``) bundle keeps up-to-date with the upstream Linux kernel, 
+(``kernel-native``) bundle keeps up-to-date with the upstream Linux kernel,
 and sometimes VirtualBox kernel modules aren't compatible with pre-kernel
 releases.
 
@@ -138,7 +138,7 @@ Install Guest Additions
 -----------------------
 
 The kernel modules are shipped with the ``kernel-lts`` bundle; however,
-you'll need to install the *user* Linux Guest Additions. To install the 
+you'll need to install the *user* Linux Guest Additions. To install the
 VirtualBox Guest Additions, follow these steps:
 
 #. Insert Guest Additions CD image using *Devices* menu
@@ -159,7 +159,7 @@ VirtualBox Guest Additions, follow these steps:
 
      # swupd bundle-add os-utils-gui
 
-   once the ``os-utils-gui`` bundle is installed, start your graphical 
+   once the ``os-utils-gui`` bundle is installed, start your graphical
    user interface with::
 
      # startx

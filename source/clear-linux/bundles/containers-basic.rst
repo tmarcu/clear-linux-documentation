@@ -1,4 +1,4 @@
-.. _bdl-containers-basic:
+.. _containers-basic:
 
 containers-basic
 ################
