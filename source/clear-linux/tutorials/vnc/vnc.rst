@@ -253,10 +253,11 @@ first.  Otherwise, skip to the `Connect to VNC session on |CL| host section belo
 
 		* On Windows:
 			
-			- Launch Putty
-			- Under the Category section, go to Session
-			- Enter the IP address of the Clear Linux host in the Host Name (or IP address) field. (See Figure 1)
-			- Set the Connection type to SSH
+			- Launch `Putty`
+			- Under the `Category` section, go to `Session`
+			- Enter the IP address of the |CL| host in the Host Name (or IP 
+			  address) field. (See Figure 1)
+			- Set the `Connection type` to `SSH`
 
 
 .. _RealVNC: https://www.realvnc.com/en/connect/download/viewer/windows/
